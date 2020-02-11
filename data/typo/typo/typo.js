@@ -86,8 +86,8 @@ Typo = function (dictionary, affData, wordsData, settings) {
 				path = "typo/dictionaries";
 			}
 			
-			if (!affData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".aff"), setAffData);
-			if (!wordsData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".dic"), setWordsData);
+			if (!affData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".aff.txt"), setAffData);
+			if (!wordsData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".dic.txt"), setWordsData);
 		}
 		else {
 			if (settings.dictionaryPath) {
@@ -100,8 +100,8 @@ Typo = function (dictionary, affData, wordsData, settings) {
 				path = './dictionaries';
 			}
 			
-			if (!affData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".aff", setAffData);
-			if (!wordsData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".dic", setWordsData);
+			if (!affData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".aff.txt", setAffData);
+			if (!wordsData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".dic.txt", setWordsData);
 		}
 	}
 	
