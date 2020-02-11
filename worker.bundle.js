@@ -1,6 +1,4 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-
-},{}],2:[function(require,module,exports){
 (function (__dirname){
 /* globals chrome: false */
 /* globals __dirname: false */
@@ -90,8 +88,8 @@ Typo = function (dictionary, affData, wordsData, settings) {
 				path = "typo/dictionaries";
 			}
 			
-			if (!affData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".aff"), setAffData);
-			if (!wordsData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".dic"), setWordsData);
+			if (!affData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".aff.txt"), setAffData);
+			if (!wordsData) readDataFile(chrome.extension.getURL(path + "/" + dictionary + "/" + dictionary + ".dic.txt"), setWordsData);
 		}
 		else {
 			if (settings.dictionaryPath) {
@@ -104,8 +102,8 @@ Typo = function (dictionary, affData, wordsData, settings) {
 				path = './dictionaries';
 			}
 			
-			if (!affData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".aff", setAffData);
-			if (!wordsData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".dic", setWordsData);
+			if (!affData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".aff.txt", setAffData);
+			if (!wordsData) readDataFile(path + "/" + dictionary + "/" + dictionary + ".dic.txt", setWordsData);
 		}
 	}
 	
@@ -979,7 +977,9 @@ if (typeof module !== 'undefined') {
 }
 
 }).call(this,"/node_modules/typo-js")
-},{"fs":1}],3:[function(require,module,exports){
+},{"fs":2}],2:[function(require,module,exports){
+
+},{}],3:[function(require,module,exports){
 var Typo = require('typo-js');
 
 var words = {}
@@ -1056,4 +1056,4 @@ self.addEventListener("message", async function(event) {
 });
 
 
-},{"typo-js":2}]},{},[3]);
+},{"typo-js":1}]},{},[3]);

@@ -5,15 +5,12 @@
   "main": "index.js",
   "scripts": {
     "serve": "serve -p 8000",
-
     "watch:worker": "watchify -d -o worker.bundle.js worker.js",
     "watch:client": "watchify -d -o client.bundle.js client.js",
     "watch": "npm run watch:worker & npm run watch:client",
-
     "build:worker": "browserify -o worker.bundle.js worker.js",
     "build:client": "browserify -o client.bundle.js client.js",
     "build": "npm run build:worker && npm run build:client",
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -21,7 +18,7 @@
   "devDependencies": {
     "browserify": "^16.5.0",
     "serve": "^11.3.0",
-    "typo-js": "^1.1.0",
+    "typo-js": "file:data/typo/typo",
     "watchify": "^3.11.1"
   }
 }
