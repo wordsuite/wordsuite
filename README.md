@@ -1,3 +1,7 @@
+DEMO
+See the live demo on github pages:
+https://wordsuite.github.io/wordsuite/demo/demo.html
+
 HOW TO USE
 
 Installation
