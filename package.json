@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^16.5.0",
+    "browserify": "^16.5.1",
     "serve": "^11.3.0",
     "typo-js": "file:data/typo/typo",
     "watchify": "^3.11.1"
