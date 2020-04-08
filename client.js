@@ -6,12 +6,13 @@ var Spell = function (dataUrl) {
 
   function spell (word) {
     return new Promise((resolve) => {
-      myWorker.onmessage = function(e) {
+      myWorker.addEventListener('message', function(e) {
         var data = JSON.parse(e.data)
+
         if (data.value === word) {
           resolve(data)
         }
-      }
+      })
 
       myWorker.postMessage(JSON.stringify({
         dataUrl,
@@ -84,7 +85,7 @@ var Spell = function (dataUrl) {
 }
 
 if (module) {
-  module.exports = Spell
+  module.exports = {Spell}
 }
 
 if (window) {

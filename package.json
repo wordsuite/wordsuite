@@ -1,8 +1,8 @@
 {
-  "name": "app",
+  "name": "wordsuite",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "client.js",
   "scripts": {
     "serve": "serve -p 8000",
     "watch:worker": "watchify -d -o worker.bundle.js worker.js",

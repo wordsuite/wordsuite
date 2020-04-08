@@ -1,4 +1,4 @@
-var Typo = require('typo-js');
+var Typo = require('./data/typo/typo');
 
 var words = {}
 var definitions = {}
